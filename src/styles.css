@@ -24,3 +24,9 @@
   text-align: center;
   margin-top: 40px;
 }
+
+.files_up span {
+  cursor: pointer;
+  color: #ff0c93;
+  font-size: 4rem;
+}

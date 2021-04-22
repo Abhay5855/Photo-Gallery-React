@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AddCircleIcon from "@material-ui/icons/AddCircle";
 
 const Upload = () => {
   const [file, setFile] = useState(null);
@@ -20,7 +21,12 @@ const Upload = () => {
   }
   return (
     <form>
-      <input type="file" onChange={changeHandler} />
+      <label className="files_up">
+        <input type="file" onChange={changeHandler} />
+        <span>
+          <AddCircleIcon />
+        </span>
+      </label>
       <div className="op">
         {error && <div className="error"> {error} </div>}
         {file && <div> {file.name} </div>}
