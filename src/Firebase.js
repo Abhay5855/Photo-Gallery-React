@@ -15,5 +15,6 @@ firebase.initializeApp(firebaseConfig);
 
 const Photostorage = firebase.storage();
 const Photofirestore = firebase.firestore();
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
-export { Photostorage, Photofirestore };
+export { Photostorage, Photofirestore, timestamp };

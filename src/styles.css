@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-body {
-  text-align: center;
+.name-file {
+  visibility: hidden;
 }
 
 :root {
@@ -36,8 +36,8 @@ body {
 }
 
 /* progress bar */
-.bar-progress div {
-  height: 5px;
-  background: #ff4040;
-  max-width: 20px;
+.bar-progress {
+  height: 2em;
+  background: #ff0c93;
+  margin-top: 20px;
 }

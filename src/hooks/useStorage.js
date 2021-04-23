@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Photostorage } from "../Firebase";
+import { Photostorage, Photofirestore, timestamp } from "../Firebase";
 
 const useStorage = (file) => {
   const [progress, setProgress] = useState(0);
@@ -10,6 +10,7 @@ const useStorage = (file) => {
   useEffect(() => {
     //reference
     const storageRef = Photostorage.ref(file.name);
+    const collectionRef = Photofirestore.collection("images");
     storageRef.put(file).on(
       "state_changed",
       (snap) => {
@@ -22,6 +23,8 @@ const useStorage = (file) => {
       },
       async () => {
         const url = await storageRef.getDownloadURL();
+        const createdAt = timestamp();
+        collectionRef.add({ url, createdAt });
         setUrl(url);
       }
     );
