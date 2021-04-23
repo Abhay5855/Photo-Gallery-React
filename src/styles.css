@@ -37,3 +37,28 @@
   background: #ff0c93;
   margin-top: 20px;
 }
+
+/* ImageGrid */
+
+.image-grid {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.image-wrap {
+  overflow: hidden;
+  height: 0;
+  padding: 50% auto;
+  position: relative;
+  opacity: 0.8;
+}
+
+.image-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  max-width: 150%;
+}
