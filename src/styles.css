@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-.name-file {
-  visibility: hidden;
-}
-
 :root {
   --app-color: #ff4040;
   --title-color: #0a75ad;
