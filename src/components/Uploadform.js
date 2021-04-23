@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
+import Progressbar from "./Progressbar";
 
 const Upload = () => {
   const [file, setFile] = useState(null);
@@ -30,6 +31,7 @@ const Upload = () => {
       <div className="op">
         {error && <div className="error"> {error} </div>}
         {file && <div> {file.name} </div>}
+        {file && <Progressbar file={file} setFile={setFile} />}
       </div>
     </form>
   );
