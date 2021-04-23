@@ -8,10 +8,20 @@ const useFirestore = (collection) => {
 const [docs,setDocs] = useState([]);
 
 
+useEffect(()=> {
 
 
 
 
+},[collection]);
+
+
+
+
+
+
+
+return {docs};
 }
 
 
