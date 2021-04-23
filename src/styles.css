@@ -9,6 +9,10 @@
   --title-color: #0a75ad;
 }
 
+.App {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 .title p {
   color: var(--app-color);
   font-size: 1.5rem;
