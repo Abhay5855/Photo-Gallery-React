@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  text-align: center;
+}
+
 :root {
   --app-color: #ff4040;
   --title-color: #0a75ad;
@@ -29,4 +33,11 @@
   cursor: pointer;
   color: #ff0c93;
   font-size: 4rem;
+}
+
+/* progress bar */
+.bar-progress div {
+  height: 5px;
+  background: #ff4040;
+  max-width: 20px;
 }

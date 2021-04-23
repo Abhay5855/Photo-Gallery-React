@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import Upload from "../components/Uploadform";
+
 import { Photostorage } from "../Firebase";
 
 const useStorage = (file) => {
