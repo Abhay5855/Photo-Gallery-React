@@ -4,12 +4,17 @@ const ImageGrid = () => {
   const { docs } = useFirestore("images");
   console.log(docs);
 
-  return <div className="images-grid">
-    {docs && docs.map(doc => (
-
-      <img src={doc.url} alt="sketches abhay" />
-    ))};
-  </div>;
+  return (
+    <div className="image-grid">
+      {docs &&
+        docs.map((doc) => (
+          <div className="image-wrap" key={doc.id}>
+            <img src={doc.url} alt="sketches abhay" />
+          </div>
+        ))}
+      ;
+    </div>
+  );
 };
 
 export default ImageGrid;
