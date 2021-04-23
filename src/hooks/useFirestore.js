@@ -1,27 +1,25 @@
 import { useState, useEffect } from "react";
 
-import {Photofirestore}  from "../Firebase";
+import { Photofirestore } from "../Firebase";
 
 const useFirestore = (collection) => {
+  const [docs, setDocs] = useState([]);
 
+  useEffect(() => {
+    const unsub = Photofirestore.collection(collection)
+      .orderBy("createdAt", "desc")
+      .onSnapshot((snap) => {
+        let documents = [];
 
-const [docs,setDocs] = useState([]);
+        snap.forEach((doc) => {
+          documents.push({ ...doc.data(), id: doc.id });
+        });
 
+        setDocs(documents);
+      });
 
-useEffect(()=> {
+    return () => unsub();
+  }, [collection]);
 
-
-
-
-},[collection]);
-
-
-
-
-
-
-
-return {docs};
-}
-
-
+  return { docs };
+};
