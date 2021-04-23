@@ -56,6 +56,7 @@
 }
 
 .image-wrap img {
+  min-height: 100%;
   position: absolute;
   top: 0;
   left: 0;
