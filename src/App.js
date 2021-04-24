@@ -15,7 +15,9 @@ export default function App() {
 
       <ImageGrid setSelectImage={setSelectImage} />
 
-      {selectImage && <Modal selectImage={selectImage} />}
+      {selectImage && (
+        <Modal selectImage={selectImage} setSelectImage={setSelectImage} />
+      )}
     </div>
   );
 }
