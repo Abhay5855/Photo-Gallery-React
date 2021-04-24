@@ -1,6 +1,6 @@
 import useFirestore from "../hooks/useFirestore";
 
-const ImageGrid = () => {
+const ImageGrid = ({ setSelectImage }) => {
   const { docs } = useFirestore("images");
   // console.log(docs);
 
@@ -8,7 +8,11 @@ const ImageGrid = () => {
     <div className="image-grid">
       {docs &&
         docs.map((doc) => (
-          <div className="image-wrap" key={doc.id}>
+          <div
+            className="image-wrap"
+            key={doc.id}
+            onClick={() => setSelectImage(doc.url)}
+          >
             <img src={doc.url} alt="" />
           </div>
         ))}

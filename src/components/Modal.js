@@ -1,7 +1,7 @@
-const Modal = () => {
+const Modal = ({ selectImage }) => {
   return (
     <div className="drop">
-      <img src="" alt="enlarged pic" />
+      <img src={selectImage} alt="enlarged pic" />
     </div>
   );
 };
