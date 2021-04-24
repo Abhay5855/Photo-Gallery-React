@@ -17,12 +17,12 @@ const Upload = () => {
       setError("");
     } else {
       setFile(null);
-      setError("Please select an image file jpeg/png");
+      setError("Please select an image file (jpeg/png");
     }
   }
   return (
     <form>
-      <label className="files_up">
+      <label>
         <input type="file" onChange={changeHandler} />
         <span>
           <AddCircleIcon />

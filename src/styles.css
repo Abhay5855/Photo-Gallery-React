@@ -29,6 +29,15 @@
   margin-top: 40px;
 }
 
+.label {
+  font-size: 20px;
+  margin: 12px auto;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: block;
+}
+
 .files_up span {
   cursor: pointer;
   color: #ff0c93;
@@ -37,7 +46,7 @@
 
 /* progress bar */
 .bar-progress {
-  height: 2em;
+  height: 5px;
   background: #ff0c93;
   margin-top: 20px;
 }
