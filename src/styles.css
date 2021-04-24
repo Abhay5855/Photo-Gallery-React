@@ -68,8 +68,8 @@ label input {
 .image-grid {
   margin: 15px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-template-columns: 1.5fr 1.5fr auto;
+  grid-gap: 30px;
   cursor: pointer;
 }
 
@@ -86,8 +86,8 @@ label input {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
-  max-width: 150%;
+  min-width: 150%;
+  max-width: 200%;
   box-shadow: 0px 1px 3px 0px #00000070;
 }
 
