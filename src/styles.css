@@ -7,6 +7,7 @@
 :root {
   --app-color: #ff4040;
   --title-color: #0a75ad;
+  --error: #ff4a4a;
 }
 
 .App {
@@ -29,13 +30,24 @@
   margin-top: 40px;
 }
 
-.label {
+form {
+  text-align: center;
+  margin: 30px auto 10px;
+}
+
+label {
   font-size: 20px;
   margin: 12px auto;
   border-radius: 50%;
   height: 30px;
   width: 30px;
   display: block;
+}
+
+label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .files_up span {
@@ -58,6 +70,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  cursor: pointer;
 }
 
 .image-wrap {
