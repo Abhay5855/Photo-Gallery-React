@@ -25,7 +25,7 @@ const Upload = () => {
       <label>
         <input type="file" onChange={changeHandler} />
         <span>
-          <AddCircleIcon style={{ cursor: "pointer" }} />
+          <AddCircleIcon style={{ cursor: "pointer", color: "#ff4a4a" }} />
         </span>
       </label>
       <div className="op">
